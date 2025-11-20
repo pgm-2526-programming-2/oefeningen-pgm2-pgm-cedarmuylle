@@ -41,38 +41,50 @@
 // }
 
 //oef 9:
-const todoList = [
-    {
-        task: "Complete Project",
-        subtasks: [
-            {
-                task: "Write Code",
-                subtasks: [
-                    { task: "Implement Feature A" },
-                    { task: "Test Feature A" },
-                    { task: "Refactor Code" },
-                ],
-            },
-            {
-                task: "Document Project",
-                subtasks: [{ task: "Write Readme" }, { task: "Create Documentation" }],
-            },
-        ],
-    },
-    {
-        task: "Prepare Presentation",
-        subtasks: [{ task: "Create Slides" }, { task: "Practice Delivery" }],
-    },
-];
+// const todoList = [
+//     {
+//         task: "Complete Project",
+//         subtasks: [
+//             {
+//                 task: "Write Code",
+//                 subtasks: [
+//                     { task: "Implement Feature A" },
+//                     { task: "Test Feature A" },
+//                     { task: "Refactor Code" },
+//                 ],
+//             },
+//             {
+//                 task: "Document Project",
+//                 subtasks: [{ task: "Write Readme" }, { task: "Create Documentation" }],
+//             },
+//         ],
+//     },
+//     {
+//         task: "Prepare Presentation",
+//         subtasks: [{ task: "Create Slides" }, { task: "Practice Delivery" }],
+//     },
+// ];
 
-function showTasks(list) {
-    for (const item of list) {
-        console.log(item.task);
+// function showTasks(list) {
+//     for (const item of list) {
+//         console.log(item.task);
 
-        if (item.subtasks) {
-            showTasks(item.subtasks);
-        }
-    }
-}
+//         if (item.subtasks) {
+//             showTasks(item.subtasks);
+//         }
+//     }
+// }
 
-showTasks(todoList);
+// showTasks(todoList);
+
+
+//oef 9.1:
+
+//ver.1:
+// function checkAge(age) {
+//     return age > 18 ? true : "Did your parents allow you?"
+// }
+
+
+console.log(checkAge(12));
+console.log(checkAge(20));
