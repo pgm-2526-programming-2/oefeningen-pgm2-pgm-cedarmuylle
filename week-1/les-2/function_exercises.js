@@ -81,10 +81,9 @@
 //oef 9.1:
 
 //ver.1:
-// function checkAge(age) {
-//     return age > 18 ? true : "Did your parents allow you?"
-// }
-
+function checkAge(age) {
+    return age > 18 ? true : "Did your parents allow you?"
+}
 
 console.log(checkAge(12));
 console.log(checkAge(20));
