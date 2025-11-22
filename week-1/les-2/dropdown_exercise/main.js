@@ -22,6 +22,25 @@ const dropdownMenu = {
     ],
 };
 
-const dropdownContainer = document.getElementById("dropdown-container");
-dropdownContainer.appendChild(generateDropdownHTML(dropdownMenu));
+const $dropdownContainer = document.getElementById("dropdown-container");
+$dropdownContainer.appendChild(generateDropdownHTML(dropdownMenu));
+
+
+let html = "";
+
+function generateDropdownHTML(obj) {
+    html += `<li>${obj.label}`
+    html += `<ul>`
+    for (item of obj.items) {
+        if (typeof item === "object") {
+            generateDropdownHTML(item);
+            html += `</ul></li>`
+        } else {
+            html += `<li>${item}</li>`
+        }
+    }
+    return html
+}
+
+console.log(generateDropdownHTML(dropdownMenu));
 
