@@ -22,11 +22,11 @@ const dropdownMenu = {
     ],
 };
 
-const $dropdownContainer = document.getElementById("dropdown-container");
-$dropdownContainer.appendChild(generateDropdownHTML(dropdownMenu));
-
-
 let html = "";
+
+const dropdownContainer = document.getElementById("dropdown-container");
+dropdownContainer.innerHTML = generateDropdownHTML(dropdownMenu);
+
 
 function generateDropdownHTML(obj) {
     html += `<li>${obj.label}`
