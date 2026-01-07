@@ -16,19 +16,36 @@
 // logMatrixNumber(2, 0);
 
 //4
-const numbers = [1, 2, 3, 4, 5];
-const string = "Hello";
-const colors = ['red', 'blue', 'green', 'yellow'];
+// const numbers = [1, 2, 3, 4, 5];
+// const string = "Hello";
+// const colors = ['red', 'blue', 'green', 'yellow'];
 
-for (const number of numbers) {
-    console.log(number);
-}
-for (const letter of string) {
-    console.log(letter);
-}
+// for (const number of numbers) {
+//     console.log(number);
+// }
+// for (const letter of string) {
+//     console.log(letter);
+// }
 
-colors.forEach((color, index) => {
-    console.log(color, index);
+// colors.forEach((color, index) => {
+//     console.log(color, index);
 
-});
+// });
+
+//5
+const words = [
+    'mal',
+    'snurkduif',
+    'bromvlieg',
+    'snottebel',
+    'knotsgek',
+    'pindakaas',
+    'fluitketel',
+    'smurfenmuts',
+];
+const dashedWords = words.join("-");
+
+const oneStartsWithB = words.some(word => word.startsWith("b"));
+
+console.log(oneStartsWithB);
 
