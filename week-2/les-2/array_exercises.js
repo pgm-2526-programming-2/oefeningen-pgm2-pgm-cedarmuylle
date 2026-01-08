@@ -47,7 +47,24 @@ const dashedWords = words.join("-");
 
 const oneStartsWithB = words.some(word => word.startsWith("b"));
 
-const wordsWithHello = words.unshift("Hello");
+words.unshift("Hello");
 
-console.log(wordsWithHello);
+const moreThanTwoLetters = words.every(word => word.length > 2);
+
+const sortedWords = words.sort(sortingFn);
+
+const thirdWord = words[2];
+
+const shortWords = words.filter(word => word.length <= 4);
+
+function sortingFn(a, b) {
+    if (a.length < b.length) {
+        return -1;
+    } else if (a.length > b.length) {
+        return 1;
+    }
+    return 0;
+}
+
+console.log(shortWords);
 
