@@ -47,5 +47,7 @@ const dashedWords = words.join("-");
 
 const oneStartsWithB = words.some(word => word.startsWith("b"));
 
-console.log(oneStartsWithB);
+const wordsWithHello = words.unshift("Hello");
+
+console.log(wordsWithHello);
 
