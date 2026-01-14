@@ -29,4 +29,30 @@ function getDataAdvancedness(item) {
     }
 };
 
-module.exports = { getDataProperties };
+function countImportance(data) {
+    let highImportanceCount = 0;
+    let lowImportanceCount = 0;
+    data.forEach((item) => {
+        if (item.details.importance > 3) {
+            highImportanceCount++;
+        } else {
+            lowImportanceCount++;
+        }
+    })
+    return [highImportanceCount, lowImportanceCount]
+}
+
+function calculateComplexity(data) {
+    let highComplexityCount = 0;
+    let lowComplexityCount = 0;
+    data.forEach((item) => {
+        if (item.details.complexity > 5) {
+            highComplexityCount++;
+        } else {
+            lowComplexityCount++;
+        }
+    })
+    return [highComplexityCount, lowComplexityCount]
+}
+
+module.exports = { getDataProperties, countImportance, calculateComplexity };
