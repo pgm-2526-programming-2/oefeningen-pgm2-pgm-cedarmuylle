@@ -3,4 +3,11 @@ function returnBooks(loansArr) {
     loansArr[2].returned = true;
 };
 
-module.exports = { returnBooks };
+function calculateloansPerMember(loans) {
+    const loansPerMember = {};
+    loans.forEach((loan) => {
+        loansPerMember[loan.memberId] = (loansPerMember[loan.memberId] || 0) + 1;
+    });
+    return loansPerMember;
+}
+module.exports = { returnBooks, calculateloansPerMember };
