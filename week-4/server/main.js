@@ -8,8 +8,14 @@ const HOST = "localhost";
 const recipesPath = path.join(__dirname, "recipes.json");
 
 function getContentFromFile(fileNameAndExtension) {
-    const fileContentAsString = fs.readFile(fileNameAndExtension, "utf8");
-    return JSON.parse(fileContentAsString);
+    return fs.readFileSync(fileNameAndExtension, { encoding: "utf8" }, (err, data) => {
+        if (err) {
+            console.error(err);
+            return;
+        }
+        console.log(data);
+        return JSON.parse(data);
+    });
 
 }
 
@@ -31,7 +37,7 @@ myServer.put('/api', (request, response) => {
 });
 
 myServer.get('/api/recipes', (request, response) => {
-    console.log("Request for recipes");
+    console.log("Request for recipes", recipesPath);
     response.json(getContentFromFile(recipesPath));
 });
 
